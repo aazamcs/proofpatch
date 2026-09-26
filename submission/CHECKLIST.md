@@ -1,31 +1,31 @@
 # Final submission checklist
 
-This is a team-owned checklist, not a claim that every external requirement is already complete.
+This is our team checklist. Publication is complete; organizer submission remains a separate step.
 
-## Included technical deliverables
-- Working Streamlit app and fixed navigation.
-- 30 behavior checks, verifier tests and a deliberate negative control.
-- Exact-snapshot evidence downloads with complete logs, XML, diff and checksums.
-- Pinned dependencies, MIT license, reproducible setup and deployment guide.
-- Our development record and AI narration credit.
-- Revised team-voice slides, cover, submission text, narrated MP4, captions and optional recording guide.
+## Completed technical deliverables
+- [x] Working Streamlit app and fixed four-tab navigation.
+- [x] 30 candidate behavior checks and 35 verifier/interface checks passing in GitHub CI on Python 3.12.
+- [x] Exact-snapshot evidence downloads with logs, XML, diff and checksums.
+- [x] Pinned dependencies, MIT license, reproducible setup and deployment guide.
+- [x] Our development record and AI narration credit.
+- [x] Team-voice slides, cover, submission text, narrated MP4, captions and optional recording guide.
+- [x] Publish source and submission assets: https://github.com/aazamcs/proofpatch
+- [x] Deploy with Python 3.12: https://proofpatch-verified.streamlit.app/
+- [x] Verify public signed-out access, all three expected outcomes and all four tabs.
+- [x] Set app and video links in submission/links.json.
 
-## Student A
+## Student A — remaining evidence
 - [ ] Recover authentic IBM Bob task/session exports and relevant screenshots.
 - [ ] Add files and accurate labels to evidence/bob/index.json; verify the downloads in the app.
-- [ ] Confirm technical claims match actual results. Original tests are preserved; additional tests and current release manifest are explicitly post-build.
-- [ ] Run `python -m pytest tests/system` and candidate behavior checks from a clean installation.
+- [ ] Review technical claims against actual results. Original tests are preserved; additional tests and the release manifest are explicitly post-build.
 
-## Student B
-- [ ] Publish this release's source at the public GitHub repository (it was empty during review).
-- [ ] Deploy app.py with Python 3.12; verify public access and all three outcomes while signed out.
-- [ ] Set app_url and video_url, if used, in submission/links.json.
+## Student B — final organizer submission
 - [ ] Review the included MP4 (recorded results with synthetic narration). Add authentic Bob evidence or record the team version with DEMO_SCRIPT.md; keep it within five minutes.
-- [ ] Upload the PDF pitch, PNG cover, code URL, app URL, descriptions and required reports.
+- [ ] Upload the PDF pitch, PNG cover, MP4, code URL, app URL, descriptions and required reports.
 - [ ] Verify both students' individual event registrations/team membership and the listed mentor/leader role in the current event interface.
 - [ ] Submit before the deadline and save the confirmation page. Do not assume a late extension.
 
-`python scripts/check_submission.py` checks local asset/link presence only. It cannot verify the authenticity of reports, public availability, team eligibility or acceptance by the organizer.
+`python scripts/check_submission.py` checks local asset/link presence only. It cannot verify report authenticity, team eligibility or organizer acceptance. Publication and deployment do not submit our entry.
 
 Official sources checked 26 September 2026:
 - https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon
