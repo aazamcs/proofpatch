@@ -1,0 +1,83 @@
+[
+  {
+    "variant": "baseline",
+    "preview_page_size": 2,
+    "status": "Defect reproduced",
+    "tests": 30,
+    "passed": 17,
+    "failed": 13,
+    "seconds": 0.242
+  },
+  {
+    "variant": "baseline",
+    "preview_page_size": 3,
+    "status": "Defect reproduced",
+    "tests": 30,
+    "passed": 17,
+    "failed": 13,
+    "seconds": 0.21
+  },
+  {
+    "variant": "baseline",
+    "preview_page_size": 4,
+    "status": "Defect reproduced",
+    "tests": 30,
+    "passed": 17,
+    "failed": 13,
+    "seconds": 0.211
+  },
+  {
+    "variant": "candidate",
+    "preview_page_size": 2,
+    "status": "Verified against this test suite",
+    "tests": 30,
+    "passed": 30,
+    "failed": 0,
+    "seconds": 0.429
+  },
+  {
+    "variant": "candidate",
+    "preview_page_size": 3,
+    "status": "Verified against this test suite",
+    "tests": 30,
+    "passed": 30,
+    "failed": 0,
+    "seconds": 0.448
+  },
+  {
+    "variant": "candidate",
+    "preview_page_size": 4,
+    "status": "Verified against this test suite",
+    "tests": 30,
+    "passed": 30,
+    "failed": 0,
+    "seconds": 0.394
+  },
+  {
+    "variant": "bad_patch",
+    "preview_page_size": 2,
+    "status": "Repair rejected",
+    "tests": 30,
+    "passed": 8,
+    "failed": 22,
+    "seconds": 3.433
+  },
+  {
+    "variant": "bad_patch",
+    "preview_page_size": 3,
+    "status": "Repair rejected",
+    "tests": 30,
+    "passed": 8,
+    "failed": 22,
+    "seconds": 3.353
+  },
+  {
+    "variant": "bad_patch",
+    "preview_page_size": 4,
+    "status": "Repair rejected",
+    "tests": 30,
+    "passed": 8,
+    "failed": 22,
+    "seconds": 3.385
+  }
+]

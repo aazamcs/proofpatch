@@ -1,0 +1,37 @@
+Our ProofPatch submission presentation. AI-generated narration (macOS Samantha). Technical frames display recorded verifier results from evidence/verification.
+
+Segment 1
+An AI generated fix can look right and still lose data. Before we ship, we need evidence it works. We built ProofPatch to make that evidence reproducible: show the original failure, test the repair against unchanged checks, and give reviewers a package they can rerun. Verify the fix. Before you ship.
+
+Segment 2
+Here is the problem behind our project. A patch can look correct while silently losing data. In our synthetic task export, records share the same creation time. At a page boundary, the original cursor skips task four. We repair this using both timestamp and identifier, then demonstrate exactly how we verified the change.
+
+Segment 3
+We used IBM Bob during our original development. Our reusable local Bob skill structures the workflow around understanding the issue, reproducing it, preserving the tests, repairing the code and packaging evidence. After using our allocated credits, we continued improving and testing locally. This makes the verification stage repeatable whenever a reviewer needs it.
+
+Segment 4
+Our verification contract links the original failure to the repair. First, we check the protected baseline, fixture and tests. Then we require the known assertion to fail on the original code and the identical complete suite to pass on the candidate. Changed tests, missing results and execution errors cannot earn a verified result.
+
+Segment 5
+Now let's walk through our recorded verification results. With the original selected, we reproduce the defect. Thirteen behavior checks fail, seventeen pass, and task four is missing from the preview. This establishes the specific failure our repair must address.
+
+Segment 6
+With our repaired candidate selected, all thirty behavior checks pass, with no errors or skipped checks. All eight task identifiers appear exactly once. We check page sizes two, three and four, larger exports, ordering, preservation of inputs and termination. The candidate earns verified against this test suite.
+
+Segment 7
+We also challenge our verifier with a deliberately incorrect repair. It repeats records and fails twenty two checks. ProofPatch rejects it. This negative control matters because a useful verification workflow must demonstrate rejection as well as success.
+
+Segment 8
+Our evidence package makes the result reproducible. It includes the exact executed source and tests, the fixture, patch, complete logs, both test reports and content checksums. We test that the exported package can be extracted and its candidate rerun successfully. Reviewers receive the evidence behind the result, not just a green status.
+
+Segment 9
+We tested the verifier itself, too. Thirty five system and interface checks pass, including changed tests, timeouts, concurrent runs and evidence downloads. Our current prototype covers one bundled case. Verification supports a human decision within the test suite's scope.
+
+Segment 10
+Developers and reviewers gain a repeatable evidence handoff. For IBM's developer ecosystem, our project offers a reusable verification pattern around Bob assisted work. Governance teams can trace what was tested and rerun it. End users benefit indirectly when defects such as incomplete exports are caught before release.
+
+Segment 11
+Our first users are small Python teams already reviewing AI assisted changes. Tests and continuous integration are established tools; our focus is joining the original failure, unchanged checks and exact execution snapshots in one review package. Next, we plan repository and CI adapters and pilots that measure review effort. Hosted team history and CI reporting are potential revenue streams to validate.
+
+Segment 12
+Before approving a repair, reviewers should be able to answer three questions: did we reproduce the bug, did the repair pass the unchanged checks, and can someone else rerun the result? That is what we built ProofPatch to deliver. Verify the fix. Before you ship. This video uses AI generated narration for our team's presentation.

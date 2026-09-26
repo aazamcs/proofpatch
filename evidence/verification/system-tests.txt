@@ -1,0 +1,5 @@
+Final submission revision: 26 September 2026
+Python 3.12.14; pytest 9.1.1
+Command: python -m pytest tests/system --junitxml=evidence/verification/system-tests.xml -q
+35 passed in 20.96s
+See system-tests.xml for individual cases.

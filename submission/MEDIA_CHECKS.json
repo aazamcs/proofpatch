@@ -1,0 +1,13 @@
+{
+  "video_seconds": 235.63,
+  "video_bytes": 4699786,
+  "resolution": "1280x720",
+  "mean_audio_db": -16.0,
+  "pdf_pages": 8,
+  "short_description_characters": 211,
+  "long_description_words": 344,
+  "system_checks_passed": 35,
+  "candidate_behavior_checks_passed": 30,
+  "narration": "AI-generated macOS Samantha",
+  "demo_source": "Recorded local verifier output"
+}

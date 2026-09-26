@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
+rootdir: /private/var/folders/5s/_qjy8pz11rx2_d6py7ksgkw40000gn/T/proofpatch-final-maoljcng/ProofPatch
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collected 35 items
+
+tests/system/test_app.py .                                               [  2%]
+tests/system/test_verifier.py ..................................         [100%]
+
+- generated xml file: /private/var/folders/5s/_qjy8pz11rx2_d6py7ksgkw40000gn/T/proofpatch-final-maoljcng/ProofPatch/final-system-tests.xml -
+============================= 35 passed in 19.64s ==============================

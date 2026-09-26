@@ -1,0 +1,203 @@
+1
+00:00:00,000 --> 00:00:04,044
+An AI generated fix can look right and still lose data.
+
+2
+00:00:04,044 --> 00:00:06,985
+Before we ship, we need evidence it works.
+
+3
+00:00:06,985 --> 00:00:16,544
+We built ProofPatch to make that evidence reproducible: show the original failure, test the repair against unchanged checks, and give reviewers a package they can rerun.
+
+4
+00:00:16,544 --> 00:00:17,647
+Verify the fix.
+
+5
+00:00:17,647 --> 00:00:18,750
+Before you ship.
+
+6
+00:00:18,750 --> 00:00:21,414
+Here is the problem behind our project.
+
+7
+00:00:21,414 --> 00:00:24,839
+A patch can look correct while silently losing data.
+
+8
+00:00:24,839 --> 00:00:29,025
+In our synthetic task export, records share the same creation time.
+
+9
+00:00:29,025 --> 00:00:32,831
+At a page boundary, the original cursor skips task four.
+
+10
+00:00:32,831 --> 00:00:38,920
+We repair this using both timestamp and identifier, then demonstrate exactly how we verified the change.
+
+11
+00:00:38,920 --> 00:00:42,205
+We used IBM Bob during our original development.
+
+12
+00:00:42,205 --> 00:00:51,648
+Our reusable local Bob skill structures the workflow around understanding the issue, reproducing it, preserving the tests, repairing the code and packaging evidence.
+
+13
+00:00:51,648 --> 00:00:56,164
+After using our allocated credits, we continued improving and testing locally.
+
+14
+00:00:56,164 --> 00:01:00,680
+This makes the verification stage repeatable whenever a reviewer needs it.
+
+15
+00:01:00,680 --> 00:01:04,478
+Our verification contract links the original failure to the repair.
+
+16
+00:01:04,478 --> 00:01:07,896
+First, we check the protected baseline, fixture and tests.
+
+17
+00:01:07,896 --> 00:01:16,252
+Then we require the known assertion to fail on the original code and the identical complete suite to pass on the candidate.
+
+18
+00:01:16,252 --> 00:01:20,810
+Changed tests, missing results and execution errors cannot earn a verified result.
+
+19
+00:01:20,810 --> 00:01:24,104
+Now let's walk through our recorded verification results.
+
+20
+00:01:24,104 --> 00:01:27,399
+With the original selected, we reproduce the defect.
+
+21
+00:01:27,399 --> 00:01:33,164
+Thirteen behavior checks fail, seventeen pass, and task four is missing from the preview.
+
+22
+00:01:33,164 --> 00:01:36,870
+This establishes the specific failure our repair must address.
+
+23
+00:01:36,870 --> 00:01:43,716
+With our repaired candidate selected, all thirty behavior checks pass, with no errors or skipped checks.
+
+24
+00:01:43,716 --> 00:01:46,711
+All eight task identifiers appear exactly once.
+
+25
+00:01:46,711 --> 00:01:53,557
+We check page sizes two, three and four, larger exports, ordering, preservation of inputs and termination.
+
+26
+00:01:53,557 --> 00:01:56,980
+The candidate earns verified against this test suite.
+
+27
+00:01:56,980 --> 00:02:01,153
+We also challenge our verifier with a deliberately incorrect repair.
+
+28
+00:02:01,153 --> 00:02:04,491
+It repeats records and fails twenty two checks.
+
+29
+00:02:04,491 --> 00:02:05,743
+ProofPatch rejects it.
+
+30
+00:02:05,743 --> 00:02:12,420
+This negative control matters because a useful verification workflow must demonstrate rejection as well as success.
+
+31
+00:02:12,420 --> 00:02:15,259
+Our evidence package makes the result reproducible.
+
+32
+00:02:15,259 --> 00:02:22,965
+It includes the exact executed source and tests, the fixture, patch, complete logs, both test reports and content checksums.
+
+33
+00:02:22,965 --> 00:02:28,643
+We test that the exported package can be extracted and its candidate rerun successfully.
+
+34
+00:02:28,643 --> 00:02:33,510
+Reviewers receive the evidence behind the result, not just a green status.
+
+35
+00:02:33,510 --> 00:02:36,239
+We tested the verifier itself, too.
+
+36
+00:02:36,239 --> 00:02:43,517
+Thirty five system and interface checks pass, including changed tests, timeouts, concurrent runs and evidence downloads.
+
+37
+00:02:43,517 --> 00:02:46,701
+Our current prototype covers one bundled case.
+
+38
+00:02:46,701 --> 00:02:51,250
+Verification supports a human decision within the test suite's scope.
+
+39
+00:02:51,250 --> 00:02:54,503
+Developers and reviewers gain a repeatable evidence handoff.
+
+40
+00:02:54,503 --> 00:03:00,602
+For IBM's developer ecosystem, our project offers a reusable verification pattern around Bob assisted work.
+
+41
+00:03:00,602 --> 00:03:04,668
+Governance teams can trace what was tested and rerun it.
+
+42
+00:03:04,668 --> 00:03:10,360
+End users benefit indirectly when defects such as incomplete exports are caught before release.
+
+43
+00:03:10,360 --> 00:03:15,274
+Our first users are small Python teams already reviewing AI assisted changes.
+
+44
+00:03:15,274 --> 00:03:25,102
+Tests and continuous integration are established tools; our focus is joining the original failure, unchanged checks and exact execution snapshots in one review package.
+
+45
+00:03:25,102 --> 00:03:30,426
+Next, we plan repository and CI adapters and pilots that measure review effort.
+
+46
+00:03:30,426 --> 00:03:35,340
+Hosted team history and CI reporting are potential revenue streams to validate.
+
+47
+00:03:35,340 --> 00:03:46,737
+Before approving a repair, reviewers should be able to answer three questions: did we reproduce the bug, did the repair pass the unchanged checks, and can someone else rerun the result?
+
+48
+00:03:46,737 --> 00:03:49,678
+That is what we built ProofPatch to deliver.
+
+49
+00:03:49,678 --> 00:03:50,781
+Verify the fix.
+
+50
+00:03:50,781 --> 00:03:51,884
+Before you ship.
+
+51
+00:03:51,884 --> 00:03:55,560
+This video uses AI generated narration for our team's presentation.
