@@ -150,7 +150,7 @@ with handoff:
     st.write('ProofPatch targets developers and reviewers who need to establish what failed, what changed, and what actually passed. The prototype automates evidence collection around one disclosed defect. It is not a general autonomous bug fixer.')
     st.markdown('**Team:** Mohammad Aazam · Mirza Yasir Abdullah Baig · Faza E Badar')
     st.link_button('Public GitHub repository', 'https://github.com/aazamcs/proofpatch')
-    st.caption('Our latest local release is ready for publication at this repository.')
+    st.caption('Our published repository includes the source, slides, narrated demo and reproducibility evidence.')
     st.markdown('**Measured value:** one run collects paired baseline/repair results and a complete evidence bundle. Run duration is displayed from actual execution. No unmeasured time-saving percentage is claimed.')
     st.markdown('**Scope:** trusted bundled Python code, one synthetic defect, three variants. A real repository adapter and CI integration are future work.')
     st.markdown('**Submission handoff:** see `START_HERE.md` and `submission/CHECKLIST.md` in the release. They guide our final evidence attachments, deployment and submission.')
